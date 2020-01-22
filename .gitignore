@@ -1,2 +1,4 @@
 temp/
 chromedriver.exe
+reviews.csv
+debug.log
