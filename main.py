@@ -1,3 +1,5 @@
+import os.path
+import sys
 import argparse
 import pandas as pd
 import wordcloud
@@ -124,6 +126,11 @@ if __name__ == "__main__":
     args = parse_args()
 
     url = process_url(args.url)
+
+    # Check for webdriver
+    if not os.path.exists(args.web_driver_path):
+        print('Please downlaod the crome driver from https://chromedriver.chromium.org/ and place chromedriver.exe in the current folder')
+        sys.exit()
 
     html = get_html_with_js(url, args.web_driver_path)
 
