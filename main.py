@@ -108,13 +108,13 @@ def plot_wordclouds_from_review_data(review_data_file):
         wc5 = None
 
     # Plot
-    plt.subplot(2,1,1)
+    plt.subplot(1,2,1)
     if wc1:
         plt.imshow(wc1)
         plt.axis('off')
         plt.title('1 start reviews')
 
-    plt.subplot(2,1,2)
+    plt.subplot(1,2,2)
     if wc5:
         plt.imshow(wc5)
         plt.axis('off')
